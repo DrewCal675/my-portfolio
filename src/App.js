@@ -1,20 +1,28 @@
-import React from "react";
-import "./styles.css";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import Chatbot from "./Chatbot";
 
 export default function Portfolio() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="portfolio-container">
       <motion.header initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="header">
         <h1>Andrew Calise</h1>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#languages">Languages</a>
-          <a href="#contact">Contact</a>
+
+        {/* Hamburger Menu Icon */}
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
+        {/* Navbar Links */}
+        <nav className={menuOpen ? "nav-links open" : "nav-links"}>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="#languages" onClick={() => setMenuOpen(false)}>Languages</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
       </motion.header>
 
@@ -63,7 +71,7 @@ export default function Portfolio() {
           </div>
           <div className="language-card">
             <img src="/images/php.png" alt="php" />
-            <p>   PHP   </p>
+            <p>PHP</p>
           </div>
           <div className="language-card">
             <img src="/images/java.png" alt="Java" />
@@ -83,12 +91,12 @@ export default function Portfolio() {
       <section id="contact" className="contact">
         <h2>Contact</h2>
         <div className="icons">
-          <a href="https://github.com/drewcal675" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-          <a href="https://linkedin.com/in/andrew-calise" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          <a href="mailto:andrewocalise@gmail.com"><FaEnvelope /></a>
+          <a href="https://github.com/drewcal675" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}><FaGithub /></a>
+          <a href="https://linkedin.com/in/andrew-calise" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}><FaLinkedin /></a>
+          <a href="mailto:andrewocalise@gmail.com" style={{ color: 'white' }}><FaEnvelope /></a>
         </div>
       </section>
-      
+
       <Chatbot />
     </div>
   );
