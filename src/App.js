@@ -37,7 +37,7 @@ export default function Portfolio() {
           <p><b>AI Chatbot</b><br />An AI chatbot powered by GPT-4o mini.</p>
         </div>
         <div className="project-card">
-          <a href="https://obi.kean.edu/~calisea@kean.edu/CPS3500/assignment5/game4/game4.html"><img src="/images/dinogame.png" width={300} height={250} alt="Dino Game" /></a>
+          <a href="https://obi.kean.edu/~calisea@kean.edu/CPS3500/assignment5/game4/game4.html" target="_blank"><img src="/images/dinogame.png" width={300} height={250} alt="Dino Game" /></a>
           <p><b>Game Recreation</b><br />A recreation of the Google Chrome Dinosaur Game.</p>
         </div>
       </section>
