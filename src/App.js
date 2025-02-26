@@ -73,8 +73,6 @@ export default function Portfolio() {
             <img src="/images/html.png" alt="HTML" />
             <p>HTML</p>
           </div>
-        </div>
-        <div className="language-container">
           <div className="language-card">
             <img src="/images/css.png" width={200} height={200} alt="CSS" />
             <p>CSS</p>
