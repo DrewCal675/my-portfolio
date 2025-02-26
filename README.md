@@ -1,3 +1,5 @@
+# How to get AI working
+To get the AI chatbot to work, paste your API key in .env_sample between the quotes of "your_api_key_here", and rename the file to .env
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
